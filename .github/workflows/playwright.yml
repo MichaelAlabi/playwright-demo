@@ -16,6 +16,8 @@ jobs:
     env:
       user1_E2E_USERNAME: ${{ secrets.USER1_E2E_USERNAME }}
       user1_E2E_PASSWORD: ${{ secrets.USER1_E2E_PASSWORD }}
+      user2_E2E_USERNAME: ${{ secrets.USER2_E2E_USERNAME }}
+      user2_E2E_PASSWORD: ${{ secrets.USER2_E2E_PASSWORD }}
     
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
