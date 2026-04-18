@@ -6,6 +6,7 @@ export class LoginPage {
   emailInput: any;
   passwordInput: any;
   loginButton: any;
+  errorMessage: any;
 
   constructor(page: {
     getByTestId(arg0: string): any;
@@ -23,6 +24,7 @@ export class LoginPage {
     this.passwordInput = page.locator('[data-test="password"]');
 
     this.loginButton = page.locator('[data-test="login-submit"]');
+    this.errorMessage = page.getByText("invalid email or password");
   }
   async goto() {
     await this.page.goto("https://practicesoftwaretesting.com/auth/login");
