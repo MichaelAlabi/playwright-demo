@@ -11,6 +11,6 @@ test("verify that user cannot sign in with invalid credentials", async ({
     process.env.user2_E2E_USERNAME!,
     process.env.user2_E2E_PASSWORD!,
   );
-  await expect(page.getByText("invalid email or password")).toBeVisible();
+  await expect(loginPage.errorMessage).toBeVisible();
   console.log("Login failed as expected with invalid credentials");
 });
