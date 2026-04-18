@@ -6,7 +6,6 @@ export class LoginPage {
   emailInput: any;
   passwordInput: any;
   loginButton: any;
-  errorMessage: any;
 
   constructor(page: {
     getByTestId(arg0: string): any;
