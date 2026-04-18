@@ -1,8 +1,10 @@
-import { test, expect} from "@playwright/test";
+import { test, expect } from "@playwright/test";
 import { LoginPage } from "./login.js";
 import dotenv from "dotenv";
 
-test("verify that user cannot sign in with invalid credentials", async ({ page }) => {
+test("verify that user cannot sign in with invalid credentials", async ({
+  page,
+}) => {
   const loginPage = new LoginPage(page as any);
   await loginPage.goto();
   await loginPage.login(
@@ -10,4 +12,5 @@ test("verify that user cannot sign in with invalid credentials", async ({ page }
     process.env.user2_E2E_PASSWORD!,
   );
   await expect(page.getByText("invalid email or password")).toBeVisible();
+  console.log("Login failed as expected with invalid credentials");
 });
