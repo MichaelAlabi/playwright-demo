@@ -2,7 +2,7 @@ import { test} from "@playwright/test";
 import { LoginPage } from "./login.js";
 import dotenv from "dotenv";
 
-test("validate that user can successfully login", async ({ page }) => {
+test("verify that user can successfully sign in", async ({ page }) => {
   const loginPage = new LoginPage(page as any);
   await loginPage.goto();
   await loginPage.login(
